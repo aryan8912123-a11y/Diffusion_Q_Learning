@@ -60,7 +60,8 @@ Phase 6 → DDIM-3 deployment                   (5.8ms, 50Hz real-time)
 
 ## Training Curves
 
-![Training Curves](training_visualization.png)
+![Training Curves](<img width="1943" height="2408" alt="training_curves_all_phases" src="https://github.com/user-attachments/assets/7c77617e-75eb-4392-a1f8-c2ed1ecde6d1" />
+)
 
 *All phases shown with real training data. Phase 3 Q mean stayed at −0.44 throughout (vs −50 in all fixed-alpha CQL runs). Phase 4 TD loss stable at 0.015–0.049.*
 
@@ -103,7 +104,8 @@ Output: Q-value (scalar) × 2 networks
 
 ## Diffusion Process Visualised
 
-![Diffusion Process](eta_sensitivity_sweep.png)
+![Diffusion Process](<img width="1920" height="1665" alt="diffusion_t100_process" src="https://github.com/user-attachments/assets/828fa615-3285-4617-a86d-94491f83318b" />
+)
 
 *Forward process shows all 6 Walker2D joint torques being progressively corrupted from t=0 (clean) to t=100 (pure noise). The cosine schedule provides a gentle start with accelerating noise addition.*
 
@@ -176,7 +178,8 @@ y      = r_norm + gamma * (1 - done) * q_next
 
 ## Safety Evaluation
 
-![Safety Comparison](safety_comparison.png)
+![Safety Comparison](<img width="1999" height="1439" alt="safety_comparison" src="https://github.com/user-attachments/assets/5a3f60b7-b033-420d-9169-e0f7c7ac8e3f" />
+)
 
 | Safety Metric | Value | Status |
 |---|---|---|
@@ -190,7 +193,8 @@ y      = r_norm + gamma * (1 - done) * q_next
 
 ## η Sensitivity Sweep
 
-![ETA Sensitivity](eta_sensitivity_sweep.png)
+![ETA Sensitivity](<img width="1793" height="1771" alt="eta_sensitivity_sweep" src="https://github.com/user-attachments/assets/c6cf9288-4db4-46a5-a138-634ba9d48f32" />
+)
 
 *Q-normalisation makes OOD rate safe for η from 0.0 to 5.0. Without Q-normalisation, η=1.0 causes 78% OOD. With Q-normalisation, even η=5.0 gives 0.000% OOD — the safety guarantee holds for any Q-guidance weight.*
 
@@ -219,7 +223,8 @@ Full DDPM at T=100 takes 107ms — too slow for real-time control. DDIM-3 compre
 
 ## rliable Evaluation
 
-![rliable](normalised_score_comparison.png)
+![rliable](<img width="1770" height="1439" alt="rliable_evaluation" src="https://github.com/user-attachments/assets/8f807962-eac2-48db-b63a-5c3d6d150539" />
+)
 
 *Performance profile and IQM bar chart with 95% confidence intervals (10K bootstrap). The Ours curve dominates all baselines from τ=0.5 onwards.*
 
@@ -334,32 +339,9 @@ with torch.no_grad():
 # action shape: (6,) — joint torques in [-1, 1]
 ```
 
----
-
-## Project Structure
 
 ```
-diffusion_ql/
-├── phase1_dataset.py          # dataset loading + normalisation
-├── phase2_ddpm_finetune.py    # DDPM actor BC pre-training
-├── phase3_cql_critic.py       # Lagrangian CQL critic
-├── phase4_joint_training.py   # joint Diffusion-QL training
-├── phase5_full_evaluation.py  # 50-episode evaluation
-├── phase6_ddim_deploy.py      # DDIM deployment + TorchScript
-├── checkpoints/
-│   ├── phase2_walker2d_best.pt
-│   ├── phase3_walker2d_critic.pt
-│   ├── phase4_walker2d_best.pt
-│   ├── actor_ddim3_deployed.pt
-│   └── deploy_config.json
-└── README.md
-```
 
----
-
-## How to explain in an interview
-
-> "I implemented Diffusion-QL for safe offline RL on Walker2D. The DDPM actor generates joint torques by iterative denoising — it can't easily generate unsafe actions because the denoising chain was trained on dataset actions. The CQL critic learns which actions historically got high reward and penalises out-of-distribution ones. The key contribution is Q-normalisation — when I added Q-guidance to the actor, collapsed Q-values of -50 caused Q-guidance to dominate BC by 45× and generated 78% unsafe actions. Normalising Q to zero mean unit variance fixed this in two lines, reducing OOD from 78% to 0.05%. Final result: normalised score 135.3 vs paper baseline 84.5, deployed at 5.8ms for 50Hz real-time control."
 
 ---
 
@@ -389,6 +371,4 @@ diffusion_ql/
 
 ---
 
-<p align="center">
-  Built by <b>Aryan Pandey</b> · HuggingFace: Aryan8912 · Google Colab T4 · Under $5
-</p>
+
