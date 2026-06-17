@@ -176,8 +176,7 @@ y      = r_norm + gamma * (1 - done) * q_next
 
 ## Safety Evaluation
 
-![Safety Comparison](https://github.com/user-attachments/assets/5a3f60b7-b033-420d-9169-e0f7c7ac8e3f />
-)
+![Safety Comparison](https://github.com/user-attachments/assets/5a3f60b7-b033-420d-9169-e0f7c7ac8e3f)
 
 | Safety Metric | Value | Status |
 |---|---|---|
