@@ -5,7 +5,6 @@
   <img src="https://img.shields.io/badge/OOD_Rate-0.05%25-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/IQM-1.586-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/DDIM--3-5.8ms-orange?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Compute-Under_$5-yellow?style=for-the-badge" />
 </p>
 
 <p align="center">
