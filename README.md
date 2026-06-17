@@ -60,8 +60,7 @@ Phase 6 → DDIM-3 deployment                   (5.8ms, 50Hz real-time)
 
 ## Training Curves
 
-![Training Curves](<img width="1943" height="2408" alt="training_curves_all_phases" src="https://github.com/user-attachments/assets/7c77617e-75eb-4392-a1f8-c2ed1ecde6d1" />
-)
+![Training Curves](https://github.com/user-attachments/assets/7c77617e-75eb-4392-a1f8-c2ed1ecde6d1)
 
 *All phases shown with real training data. Phase 3 Q mean stayed at −0.44 throughout (vs −50 in all fixed-alpha CQL runs). Phase 4 TD loss stable at 0.015–0.049.*
 
