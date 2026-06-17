@@ -103,8 +103,7 @@ Output: Q-value (scalar) × 2 networks
 
 ## Diffusion Process Visualised
 
-![Diffusion Process](https://github.com/user-attachments/assets/828fa615-3285-4617-a86d-94491f83318b />
-)
+![Diffusion Process](https://github.com/user-attachments/assets/828fa615-3285-4617-a86d-94491f83318b)
 
 *Forward process shows all 6 Walker2D joint torques being progressively corrupted from t=0 (clean) to t=100 (pure noise). The cosine schedule provides a gentle start with accelerating noise addition.*
 
@@ -192,8 +191,7 @@ y      = r_norm + gamma * (1 - done) * q_next
 
 ## η Sensitivity Sweep
 
-![ETA Sensitivity](https://github.com/user-attachments/assets/c6cf9288-4db4-46a5-a138-634ba9d48f32 />
-)
+![ETA Sensitivity](https://github.com/user-attachments/assets/c6cf9288-4db4-46a5-a138-634ba9d48f32)
 
 *Q-normalisation makes OOD rate safe for η from 0.0 to 5.0. Without Q-normalisation, η=1.0 causes 78% OOD. With Q-normalisation, even η=5.0 gives 0.000% OOD — the safety guarantee holds for any Q-guidance weight.*
 
@@ -222,8 +220,7 @@ Full DDPM at T=100 takes 107ms — too slow for real-time control. DDIM-3 compre
 
 ## rliable Evaluation
 
-![rliable](https://github.com/user-attachments/assets/8f807962-eac2-48db-b63a-5c3d6d150539 />
-)
+![rliable](https://github.com/user-attachments/assets/8f807962-eac2-48db-b63a-5c3d6d150539)
 
 *Performance profile and IQM bar chart with 95% confidence intervals (10K bootstrap). The Ours curve dominates all baselines from τ=0.5 onwards.*
 
